@@ -27,6 +27,13 @@ var Engine = (function(global) {
 
     const modal = document.querySelector('.modal-bg');
     const replay = document.querySelector('.modal-button');
+    
+    replay.addEventListener('click', function() {
+        modal.classList.toggle('hide');
+        player.resetHero();
+        player.playerWin = false;
+        win.requestAnimationFrame(main);
+    });
 
     canvas.width = 505;
     canvas.height = 606;
@@ -60,8 +67,8 @@ var Engine = (function(global) {
          * function again as soon as the browser is able to draw another frame.
          */
         if (player.playerWin) {
-            console.log('Player Wins!');
             win.cancelAnimationFrame(id);
+            modal.classList.toggle('hide');
         }
         else {
             id = win.requestAnimationFrame(main);
