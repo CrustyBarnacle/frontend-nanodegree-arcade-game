@@ -25,6 +25,9 @@ var Engine = (function(global) {
         lastTime,
         id;
 
+    const modal = document.querySelector('.modal-bg');
+    const replay = document.querySelector('.modal-button');
+
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
@@ -99,8 +102,10 @@ var Engine = (function(global) {
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
+            enemy.checkCollisions();
         });
         player.update();
+        player.checkCollisions();
     }
 
     /* This function initially draws the "game level", it will then call

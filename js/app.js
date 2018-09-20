@@ -20,12 +20,14 @@ class Enemy {
         else { // Reset position to start
             this.x = this.resetPosition;
         }
+    }
 
-    // TODO: checkCollisions
-        // if Enemy row === Player row
-            // if Enemy and player collide
-                // collision_condition
-
+    checkCollisions() {
+        if (this.y === player.y) {
+            if (this.x + this.step / 2 > player.x && this.x < player.x + player.step / 2) {
+                player.resetHero();
+                }
+        }
     }
 
     render() {
@@ -50,21 +52,19 @@ class Hero {
     }
 
     update() {
-        // TODO: move to Enemy class
-        // check Collision
-        let playerRight = this.x + this.step / 2;
-        for(let enemy of allEnemies) {
-            // Did player collide with any enemy?
-            let enemyRight = enemy.x + enemy.step / 2;
-            if (this.y === enemy.y && (enemyRight > this.x && enemy.x < playerRight)) {
-                this.resetHero();
-            }
-        }
-        // check Win
         if (this.y === 55) {
             this.playerWin = true;
         }
-
+    }
+    
+    checkCollisions() {
+        for(let enemy of allEnemies) {        
+            if (this.y === enemy.y) {
+                if (this.x + this.step / 2 > enemy.x && this.x < enemy.x + enemy.step / 2) {
+                    player.resetHero();
+                    }
+            }
+        }
     }
 
     // Draw player sprite at current x,y
