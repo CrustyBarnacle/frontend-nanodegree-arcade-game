@@ -2,11 +2,11 @@
 class Enemy {
     constructor(x, y, speed) {
         // Variables applied to each of our instances
+        this.sprite = 'images/enemy-bug.png';
         this.x = x;
         this.y = y + 55;
-        this.speed = speed;
-        this.sprite = 'images/enemy-bug.png';
         this.step = 101;
+        this.speed = speed;
         this.boundary = this.step * 5; // places bug just off screen
         this.resetPosition = -this.step;
     }
@@ -21,7 +21,11 @@ class Enemy {
             this.x = this.resetPosition;
         }
 
-        
+    // TODO: checkCollisions
+        // if Enemy row === Player row
+            // if Enemy and player collide
+                // collision_condition
+
     }
 
     render() {
@@ -46,6 +50,7 @@ class Hero {
     }
 
     update() {
+        // TODO: move to Enemy class
         // check Collision
         let playerRight = this.x + this.step / 2;
         for(let enemy of allEnemies) {
