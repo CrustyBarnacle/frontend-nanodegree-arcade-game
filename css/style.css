@@ -1,5 +1,9 @@
-body {
+
+ /* Modal CSS based on previous Memory Game FEND project :-D */
+body, html {
+    height: 100%;
     text-align: center;
+    background: linear-gradient(0deg, rgba(75, 152, 92, 1) 25%, blue);
 }
 
 .modal-bg {
@@ -14,16 +18,18 @@ body {
 .modal-body {
     position: relative;
     width: 250px;
-    height: 250px;
+    height: 150px;
     top: 50%;
     left: 50%;
-    background: #fff;
+    border-radius: 10px;
+    background: rgba(140, 140, 140, 1);
     transform: translate(-50%, -80%);
 }
 
 .modal-button {
     font-weight: bold;
-    top: 50%;
+    font-size: 1em;
+    margin: 25%;
 }
 
 .hide {
