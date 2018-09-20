@@ -7,20 +7,21 @@ class Enemy {
         this.speed = speed;
         this.sprite = 'images/enemy-bug.png';
         this.step = 101;
-        this.boundary = this.step * 5;
+        this.boundary = this.step * 5; // places bug just off screen
         this.resetPosition = -this.step;
     }
 
     update(dt) {
-        // If enemy is not past boundary, then keep moving
-        if(this.x < this.boundary) { // places bug just off screen
+        // If not past boundary, keep moving
+        if(this.x < this.boundary) {
             // Move forward, increment x by speed * dt
             this.x += this.speed * dt;
         }
-        else {
-            // Reset position to start
+        else { // Reset position to start
             this.x = this.resetPosition;
         }
+
+        
     }
 
     render() {
