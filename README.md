@@ -1,6 +1,24 @@
-frontend-nanodegree-arcade-game
-===============================
+# frontend-nanodegree-arcade-game
+This is a project for Udacity Frontend Nanodegree (FEND) online classs.
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## How to Run the game
+ 1. Download or clone the repository.
+ 2. Point your browswer to index.html
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## How to Play the arcade game
+The arrow keys control the player:
+
+            (Up) :arrow_up_small
+:arrow_left_small (Left) | (Right) :arrow_right_small
+            :arrow_down_small (Down)
+
+Use the arrow keys to control the movement of our Hero from space to space,
+until you reach the edger of the water! If you run into a bug, you'll have to
+start over :-P.
+
+
+## Built With help from and use of the following:
+
+* [Arcade Game Walkthru - Matthew Cranford](https://matthewcranford.com/arcade-game-walkthrough-part-1-starter-code-breakdown/) - The psuedocode and project breakdown
+* [Atom](https://atom.io/) - A _Spaceage_ Code Editor for all the things!
+* [MDN web docs - JavaScript Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) - Mozilla Developer Netowrk Docs
