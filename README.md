@@ -8,10 +8,10 @@ This is a project for the [Udacity Frontend Nanodegree (FEND)](https://www.udaci
 ## How to Play the arcade game
 The arrow keys control the player:
 
-:arrow_up_small: UP
-:arrow_down_small: Down
-:arrow_left_small: Left
-:arrow_right_small: Right
+ :arrow_up_small: UP
+ :arrow_down_small: Down
+ :arrow_backward: Left
+ :arrow_forward: Right
 
 Use the arrow keys to control the movement of our Hero from space to space,
 until you reach the edge of the water!
